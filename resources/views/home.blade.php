@@ -41,9 +41,9 @@
                         <label for="templateBody" class="form-label">Template Body</label>
                         @verbatim
                         <textarea required rows="10" class="form-control" id="templateBody" name="templateBody">
-{{name1}} read "{{book1}}" and will {{#if willRecommend1}} not{{#end}} recommend it to read.
+{{name1}} read "{{book1}}" and will {{#if hate1}} not{{#end}} recommend it to read.
 
-{{name2}} read "{{book2}}" and will {{#if willRecommend2}} not{{#end}} recommend it to read.</textarea>
+{{name2}} read "{{book2}}" and will {{#if hate2}} not{{#end}} recommend it to read.</textarea>
                         @endverbatim
                     </div>
                 </div>
@@ -57,8 +57,8 @@
     name2: "John",
     book1: "Hyperion",
     book2: "Neuromancer",
-    willRecommend1: true,
-    willRecommend2: false,
+    hate1: false,
+    hate2: true,
 }</textarea>
                         @endverbatim
                     </div>
@@ -71,7 +71,7 @@
         <div class="col-6">
             <div class="card" style="height: 100%;">
                 <div class="card-body highlight">
-                    <div id="output"></div>
+                    <pre id="output"></pre>
                 </div>
             </div>
         </div>
